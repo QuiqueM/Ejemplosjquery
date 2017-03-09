@@ -4,14 +4,35 @@
     <meta charset="UTF-8">
     <title>jQuey</title>
     <script src="jquery-3.1.1.min.js"></script>
-    <script src="holajquery.js"></script>
+  <!-- <script src="holajquery.js"></script> -->
+  <script>
+  /*  $(function () {
+        $('#boton1').click(function () {
+            alert('hola' + $(this).text())
+            
+        })
+    })*/
+   /* $(function () {
+        $('.boton').on('click',function () {
+            alert('hola'+$(this).text())
+        })
+    })*/
+    $(function () {
+        $('button').on('click','.boton',{propiedad1:'valor1',propiedad2:'valor2'},function (e) {
+            alert(e.data.propiedad1);
+        })
+    })
+  </script>
 </head>
 <body>
     <h1>Hola jQuery</h1>
     <h2>Encabezado 1</h2>
     <p class="parrafo">parrafo 1</p>
-    <h2>Encabezado 2</h2>
+    <button class="boton">boton1</button>
+    <h2>Encabezado 2</h2>  
+    <button class="boton">boton2</button>  
     <p class="parrafo">parrafo 2</p>
+    <button class="boton">boton3</button>
     <h2>Encabezado 3</h2>
     <p>parrafo 3</p>
 
