@@ -18,7 +18,7 @@
         })
     })*/
     $(function () {
-        $('button').on('click','.boton',{propiedad1:'valor1',propiedad2:'valor2'},function (e) {
+        $('button').on('click',{propiedad1:'valor1',propiedad2:'valor2'},function (e) {
             alert(e.data.propiedad1);
         })
     })
