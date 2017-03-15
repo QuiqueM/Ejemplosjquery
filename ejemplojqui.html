@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejemplo jQueryUI</title>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+    <style>
+        #acordeon{
+            width: 400px;
+        }
+        .caja{
+            widows: 400px;
+            height: 400px;
+            background-color: green;
+            border: solid 1px black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejmplos de jQueryUI</h1>
+    <h2>Ejmplos de acordeon</h2>
+    <div id="acordeon">
+        <h3>Encabezado 1</h3>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, aut, placeat! Odit sed ut labore consequuntur in magnam possimus, veniam commodi neque a, molestias eius. Exercitationem numquam repellendus ullam odit!</p>
+        </div>
+        <h3>Encabezado 2</h3>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, aut, placeat! Odit sed ut labore consequuntur in magnam possimus, veniam commodi neque a, molestias eius. Exercitationem numquam repellendus ullam odit!</p>
+        </div>
+       <h3>Encabezado 3</h3>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, aut, placeat! Odit sed ut labore consequuntur in magnam possimus, veniam commodi neque a, molestias eius. Exercitationem numquam repellendus ullam odit!</p>
+        </div>
+        
+    </div>
+    <h2>Ejmplo de Pestañas</h2>
+    <div id="pesteñas">
+        <ul>
+            <li><a href="#contenido1">Pestaña 1</a></li>
+            <li><a href="#contenido2">Pestaña 1</a></li>
+            <li><a href="#contenido3">Pestaña 1</a></li>
+        </ul>
+        <div id="contenido1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum aperiam, molestiae nulla ratione sit cupiditate necessitatibus dolorem amet, culpa sunt doloremque omnis ullam dicta repellendus porro. Labore incidunt mollitia ipsum!</p>
+        </div>
+        <div id="contenido2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum aperiam, molestiae nulla ratione sit cupiditate necessitatibus dolorem amet, culpa sunt doloremque omnis ullam dicta repellendus porro. Labore incidunt mollitia ipsum!</p>
+        </div>
+         <div id="contenido3">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum aperiam, molestiae nulla ratione sit cupiditate necessitatibus dolorem amet, culpa sunt doloremque omnis ullam dicta repellendus porro. Labore incidunt mollitia ipsum!</p>
+        </div>
+
+    </div>
+    <h3>Ejmplo Arrastrado</h3>
+        <div class="caja" id="limite">
+        <p id="arrastrable"> Arrastrame</p>
+        </div>
+    <script>
+        $(function(){
+            $('#acordeon').accordion()
+            $('#pestañas').tabs()
+            $('arrastrable').draggable({
+                containment:'#limite'
+            })
+        })
+    </script>
+</body>
+</html>
