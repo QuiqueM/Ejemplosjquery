@@ -39,7 +39,7 @@
         
     </div>
     <h2>Ejmplo de Pestañas</h2>
-    <div id="pesteñas">
+    <div id="pestañas">
         <ul>
             <li><a href="#contenido1">Pestaña 1</a></li>
             <li><a href="#contenido2">Pestaña 1</a></li>
@@ -58,13 +58,13 @@
     </div>
     <h3>Ejmplo Arrastrado</h3>
         <div class="caja" id="limite">
-        <p id="arrastrable"> Arrastrame</p>
+        <span id="arrastrable"> Arrastrame</span>
         </div>
     <script>
         $(function(){
             $('#acordeon').accordion()
             $('#pestañas').tabs()
-            $('arrastrable').draggable({
+            $('#arrastrable').draggable({
                 containment:'#limite'
             })
         })
